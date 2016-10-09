@@ -92,7 +92,7 @@
 <meta property="og:site_name" content="和平老三不带v">
 <meta property="og:description" content="需求描述最近开发遇到这么一个需求，我们项目架构采用MVVM的变种模式，什么鬼？简单来说，在Model类和Controller类之间分离出专门处理数据逻辑的DataController层，假设A是我们的Controller层，B是DataController层.需求就是在B类中实现修改A类中的全局变量，实现方法有很多，下面的方法是我认为最elegant（zhuangbi）的伪代码如下：
 12345">
-<meta property="og:updated_time" content="2016-10-09T08:39:28.000Z">
+<meta property="og:updated_time" content="2016-10-09T08:40:50.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="B类修改A类中变量的另一种方法">
 <meta name="twitter:description" content="需求描述最近开发遇到这么一个需求，我们项目架构采用MVVM的变种模式，什么鬼？简单来说，在Model类和Controller类之间分离出专门处理数据逻辑的DataController层，假设A是我们的Controller层，B是DataController层.需求就是在B类中实现修改A类中的全局变量，实现方法有很多，下面的方法是我认为最elegant（zhuangbi）的伪代码如下：
@@ -307,7 +307,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">B.m:</div><div class="line">	-(void)showMeTheCode:(Var **)c_pointer_addr&#123;</div><div class="line"></div><div class="line">	*c_pointer_addr = new_c;//将修改有的new_c赋值给全局变量</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
 <p>运行后，会发现globalVar的值已经在B类中修改了。</p>
 <hr>
-<h2 id="stackoverflow有一个回复可以参考链接🔗"><a href="#stackoverflow有一个回复可以参考链接🔗" class="headerlink" title="stackoverflow有一个回复可以参考链接🔗"></a>stackoverflow有一个回复可以参考<a href="http://stackoverflow.com/questions/8814718/handling-pointer-to-pointer-ownership-issues-in-arc/8829294#8829294" target="_blank" rel="external">链接🔗</a></h2><p>什么情况下会遇到这种问题：</p>
+<h2 id="stackoverflow有一个回复可以参考🔗"><a href="#stackoverflow有一个回复可以参考🔗" class="headerlink" title="stackoverflow有一个回复可以参考🔗"></a><a href="http://stackoverflow.com/questions/8814718/handling-pointer-to-pointer-ownership-issues-in-arc/8829294#8829294" target="_blank" rel="external">stackoverflow有一个回复可以参考🔗</a></h2><p>什么情况下会遇到这种问题：</p>
 <p>我是在给类解耦的时候用到的，业务代码分离过程中，为了保证相互不影响，尽量少的粘连，可以采用此方法来实现</p>
 
       
@@ -499,7 +499,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#需求描述"><span class="nav-number">1.</span> <span class="nav-text">需求描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#stackoverflow有一个回复可以参考链接🔗"><span class="nav-number">2.</span> <span class="nav-text">stackoverflow有一个回复可以参考链接🔗</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#需求描述"><span class="nav-number">1.</span> <span class="nav-text">需求描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#stackoverflow有一个回复可以参考🔗"><span class="nav-number">2.</span> <span class="nav-text">stackoverflow有一个回复可以参考🔗</span></a></li></ol></div>
             
           </div>
         </section>
