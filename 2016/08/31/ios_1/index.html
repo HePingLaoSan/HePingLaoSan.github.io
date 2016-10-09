@@ -92,7 +92,7 @@
 <meta property="og:site_name" content="和平老三不带v">
 <meta property="og:description" content="需求描述最近开发遇到这么一个需求，我们项目架构采用MVVM的变种模式，什么鬼？简单来说，在Model类和Controller类之间分离出专门处理数据逻辑的DataController层，假设A是我们的Controller层，B是DataController层.需求就是在B类中实现修改A类中的全局变量，实现方法有很多，下面的方法是我认为最elegant（zhuangbi）的伪代码如下：
 12345">
-<meta property="og:updated_time" content="2016-09-09T08:01:36.000Z">
+<meta property="og:updated_time" content="2016-10-09T02:49:30.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="B类修改A类中全局变量的另一种方法">
 <meta name="twitter:description" content="需求描述最近开发遇到这么一个需求，我们项目架构采用MVVM的变种模式，什么鬼？简单来说，在Model类和Controller类之间分离出专门处理数据逻辑的DataController层，假设A是我们的Controller层，B是DataController层.需求就是在B类中实现修改A类中的全局变量，实现方法有很多，下面的方法是我认为最elegant（zhuangbi）的伪代码如下：
@@ -304,7 +304,7 @@
 <h2 id="需求描述"><a href="#需求描述" class="headerlink" title="需求描述"></a>需求描述</h2><p>最近开发遇到这么一个需求，我们项目架构采用MVVM的变种模式，什么鬼？简单来说，在Model类和Controller类之间分离出专门处理数据逻辑的DataController层，假设A是我们的Controller层，B是DataController层.需求就是在B类中实现修改A类中的全局变量，实现方法有很多，下面的方法是我认为最elegant（zhuangbi）的<br>伪代码如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">A:</div><div class="line">&#123;</div><div class="line">	Var *globalVar//全局变量</div><div class="line">&#125;</div><div class="line"></div><div class="line">     B *b = [B new];//实例化出b对象</div><div class="line">     Var* c_globalVar = globalVar;//将全局变量转成局部变量</div><div class="line">     [b showMeTheCode:&amp;c_globalVar];</div><div class="line">     globalVar = c_globalVar;</div><div class="line">     NSLog(@“%@”,globalVar);</div></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">B.h：</div><div class="line">     -(void)showMeTheCode:(Var **)c_pointer_addr;</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">B.m:</div><div class="line">	-(void)showMeTheCode:(Var **)c_pointer_addr&#123;</div><div class="line">	</div><div class="line">	*c_pointer_addr = new_c;//将修改有的new_c赋值给全局变量</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">B.m:</div><div class="line">	-(void)showMeTheCode:(Var **)c_pointer_addr&#123;</div><div class="line"></div><div class="line">	*c_pointer_addr = new_c;//将修改有的new_c赋值给全局变量</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
 <p>运行后，会发现globalVar的值已经在B类中修改了。</p>
 <hr>
 <h2 id="这也可以？为什么？"><a href="#这也可以？为什么？" class="headerlink" title="这也可以？为什么？"></a><a href="http://stackoverflow.com/questions/8814718/handling-pointer-to-pointer-ownership-issues-in-arc/8829294#8829294" target="_blank" rel="external">这也可以？为什么？</a></h2><p>这么写的好处：</p>
@@ -440,7 +440,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
