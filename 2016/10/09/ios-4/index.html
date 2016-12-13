@@ -84,37 +84,21 @@
 
 
 
-<meta name="description" content="不走dealloc的解决办法当controller不走dealloc说明ARC认为你的controller还处于被持有状态，此时检查可能持有它的对象，过程可能会很痛苦。
-容易忽视的地方：
-
-1.NSTimer.
-  没有及时的invalidate，这样timer持有者controller，导致controller释放不掉
-
-2.delegate
-  ARC机制下,delegate不需要强引用了，w">
+<meta name="description" content="iOS 性能优化Tips本文记录下在app调优过程中遇到的性能问题以及解决办法。（不定期更新）
+1。NSDateFormatter老生常谈的问题，刚进入这个项目就发现代码大量使用了NSDateFormatter。自己新建了一个工程进行了测试，分别用了三种方法来进行NSDate和字符串的相互转换，其中:Test1，采用标准的NSDateFormatter *dateFormatter = [[NSD">
 <meta property="og:type" content="article">
-<meta property="og:title" content="不走dealloc的解决办法">
-<meta property="og:url" content="https://hepinglaosan.github.io/2016/09/06/ios-2/index.html">
+<meta property="og:title" content="iOS 性能优化Tips">
+<meta property="og:url" content="https://hepinglaosan.github.io/2016/10/09/ios-4/index.html">
 <meta property="og:site_name" content="和平老三不带V">
-<meta property="og:description" content="不走dealloc的解决办法当controller不走dealloc说明ARC认为你的controller还处于被持有状态，此时检查可能持有它的对象，过程可能会很痛苦。
-容易忽视的地方：
-
-1.NSTimer.
-  没有及时的invalidate，这样timer持有者controller，导致controller释放不掉
-
-2.delegate
-  ARC机制下,delegate不需要强引用了，w">
-<meta property="og:updated_time" content="2016-10-09T02:49:30.000Z">
+<meta property="og:description" content="iOS 性能优化Tips本文记录下在app调优过程中遇到的性能问题以及解决办法。（不定期更新）
+1。NSDateFormatter老生常谈的问题，刚进入这个项目就发现代码大量使用了NSDateFormatter。自己新建了一个工程进行了测试，分别用了三种方法来进行NSDate和字符串的相互转换，其中:Test1，采用标准的NSDateFormatter *dateFormatter = [[NSD">
+<meta property="og:image" content="http://ww2.sinaimg.cn/mw1024/005NVLA9gw1fapdnsp6azj30yi1pcdj5.jpg">
+<meta property="og:updated_time" content="2016-12-13T11:32:02.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="不走dealloc的解决办法">
-<meta name="twitter:description" content="不走dealloc的解决办法当controller不走dealloc说明ARC认为你的controller还处于被持有状态，此时检查可能持有它的对象，过程可能会很痛苦。
-容易忽视的地方：
-
-1.NSTimer.
-  没有及时的invalidate，这样timer持有者controller，导致controller释放不掉
-
-2.delegate
-  ARC机制下,delegate不需要强引用了，w">
+<meta name="twitter:title" content="iOS 性能优化Tips">
+<meta name="twitter:description" content="iOS 性能优化Tips本文记录下在app调优过程中遇到的性能问题以及解决办法。（不定期更新）
+1。NSDateFormatter老生常谈的问题，刚进入这个项目就发现代码大量使用了NSDateFormatter。自己新建了一个工程进行了测试，分别用了三种方法来进行NSDate和字符串的相互转换，其中:Test1，采用标准的NSDateFormatter *dateFormatter = [[NSD">
+<meta name="twitter:image" content="http://ww2.sinaimg.cn/mw1024/005NVLA9gw1fapdnsp6azj30yi1pcdj5.jpg">
 
 
 
@@ -132,7 +116,7 @@
   };
 </script>
 
-  <title> 不走dealloc的解决办法 | 和平老三不带V </title>
+  <title> iOS 性能优化Tips | 和平老三不带V </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -251,7 +235,7 @@
   
   
 
-  <article class="post post-type-tags " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
     
       <header class="post-header">
@@ -262,7 +246,7 @@
             
             
               
-                不走dealloc的解决办法
+                iOS 性能优化Tips
               
             
           </h1>
@@ -274,8 +258,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-09-06T18:07:12+08:00" content="2016-09-06">
-              2016-09-06
+            <time itemprop="dateCreated" datetime="2016-10-09T10:47:01+08:00" content="2016-10-09">
+              2016-10-09
             </time>
           </span>
 
@@ -285,8 +269,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/09/06/ios-2/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/06/ios-2/" itemprop="commentsCount"></span>
+                <a href="/2016/10/09/ios-4/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/09/ios-4/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -296,7 +280,7 @@
 
           
           
-             <span id="/2016/09/06/ios-2/" class="leancloud_visitors" data-flag-title="不走dealloc的解决办法">
+             <span id="/2016/10/09/ios-4/" class="leancloud_visitors" data-flag-title="iOS 性能优化Tips">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -318,24 +302,9 @@
       
 
       
-        <h1 id="不走dealloc的解决办法"><a href="#不走dealloc的解决办法" class="headerlink" title="不走dealloc的解决办法"></a>不走dealloc的解决办法</h1><p>当controller不走dealloc说明ARC认为你的controller还处于被持有状态，此时检查可能持有它的对象，过程可能会很痛苦。</p>
-<p>容易忽视的地方：</p>
-<ul>
-<li><p>1.NSTimer.</p>
-<p>  没有及时的invalidate，这样timer持有者controller，导致controller释放不掉</p>
-</li>
-<li><p>2.delegate</p>
-<p>  ARC机制下,delegate不需要强引用了，weak就可以了</p>
-</li>
-<li><p>3.block</p>
-<p>  weak strong dance一下，世界清净</p>
-</li>
-<li><p>4.本身被强引用</p>
-<p>  检查一下该controller是否是作为全局变量push出来的，如果是作为全局变量，那么他的上一级controller持有这该controller，dealloc仍然不会走。即</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[self.navigationController pushViewController:全局controller animated:YES];</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>以上方法仍然不能找到原因的话也可以用<code>instruments</code>来查看对象的持有情况。<a href="http://stackoverflow.com/questions/14890402/instruments-allocations-track-alloc-and-dealloc-of-objects-of-user-defined-class" target="_blank" rel="external">点击这里</a></p>
+        <h2 id="iOS-性能优化Tips"><a href="#iOS-性能优化Tips" class="headerlink" title="iOS 性能优化Tips"></a>iOS 性能优化Tips</h2><p>本文记录下在app调优过程中遇到的性能问题以及解决办法。（不定期更新）</p>
+<h1 id="1。NSDateFormatter"><a href="#1。NSDateFormatter" class="headerlink" title="1。NSDateFormatter"></a>1。NSDateFormatter</h1><p>老生常谈的问题，刚进入这个项目就发现代码大量使用了NSDateFormatter。自己新建了一个工程进行了测试，分别用了三种方法来进行NSDate和字符串的相互转换，其中:<br>Test1，采用标准的<code>NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];</code>随用随创建方式（显然不是Apple官方推荐的，也是我们代码中应该避免的）。<br>Test2采用<code>static NSDateFormatter *dateFormatter;</code>方式，静态化需要的变量，保证只创建一次。<br>Test3利用strptime函数来进行转换.<br>分别进行100次循环，耗时如下： <img src="http://ww2.sinaimg.cn/mw1024/005NVLA9gw1fapdnsp6azj30yi1pcdj5.jpg" alt="计算结果"></p>
+<p>数据量大的时候还是少用NSDateFormatter吧！附Test3的代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">+ (NSDate *)dateFromISO8601StringDateFormatter:(NSString *)string locale:(NSLocale *)locale&#123;</div><div class="line">    if (!string) &#123;</div><div class="line">        return nil;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    struct tm tm;</div><div class="line">    time_t t;</div><div class="line"></div><div class="line">    strptime([string cStringUsingEncoding:NSUTF8StringEncoding], &quot;%Y-%m-%d %H:%M:%S&quot;, &amp;tm);</div><div class="line">    tm.tm_isdst = -1;</div><div class="line">    t = mktime(&amp;tm);</div><div class="line"></div><div class="line">    return [NSDate dateWithTimeIntervalSince1970:t + [[NSTimeZone localTimeZone] secondsFromGMT]];</div><div class="line">&#125;</div><div class="line"></div><div class="line">- (NSString *)ISO8601String:(NSDate*)date &#123;</div><div class="line">    struct tm *timeinfo;</div><div class="line">    char buffer[80];</div><div class="line"></div><div class="line">    time_t rawtime = [date timeIntervalSince1970] - [[NSTimeZone localTimeZone] secondsFromGMT];</div><div class="line">    timeinfo = localtime(&amp;rawtime);</div><div class="line"></div><div class="line">    strftime(buffer, 80, &quot;%Y-%m-%d %H:%M:%S&quot;, timeinfo);</div><div class="line"></div><div class="line">    return [NSString stringWithCString:buffer encoding:NSUTF8StringEncoding];</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -366,16 +335,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/08/31/ios_1/" rel="next" title="iOS解耦心得---B类修改A类中变量的另一种方法">
-                <i class="fa fa-chevron-left"></i> iOS解耦心得---B类修改A类中变量的另一种方法
+              <a href="/2016/09/06/ios-2/" rel="next" title="不走dealloc的解决办法">
+                <i class="fa fa-chevron-left"></i> 不走dealloc的解决办法
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/10/09/ios-4/" rel="prev" title="iOS 性能优化Tips">
-                iOS 性能优化Tips <i class="fa fa-chevron-right"></i>
+              <a href="/2016/10/09/ios-3/" rel="prev" title="如何把对象存入本地">
+                如何把对象存入本地 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -405,8 +374,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/09/06/ios-2/"
-           data-title="不走dealloc的解决办法" data-url="https://hepinglaosan.github.io/2016/09/06/ios-2/">
+      <div class="ds-thread" data-thread-key="2016/10/09/ios-4/"
+           data-title="iOS 性能优化Tips" data-url="https://hepinglaosan.github.io/2016/10/09/ios-4/">
       </div>
     
   </div>
@@ -510,7 +479,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#不走dealloc的解决办法"><span class="nav-number">1.</span> <span class="nav-text">不走dealloc的解决办法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#iOS-性能优化Tips"><span class="nav-number">1.</span> <span class="nav-text">iOS 性能优化Tips</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1。NSDateFormatter"><span class="nav-number"></span> <span class="nav-text">1。NSDateFormatter</span></a></div>
             
           </div>
         </section>
