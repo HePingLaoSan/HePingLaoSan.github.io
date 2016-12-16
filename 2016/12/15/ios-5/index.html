@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="iOS," />
 
 
 
@@ -84,13 +84,19 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="iOS">
-<meta property="og:url" content="https://hepinglaosan.github.io/tags/iOS/index.html">
+<meta name="description" content="Runtime相关知识
+1.Objective-C中的+load方法以及+initialize方法+load+load 方法是当类或分类被添加到 Objective-C runtime 时被调用的，实现这个方法可以让我们在类加载的时候执行一些类相关的行为。子类的 +load 方法会在它的所有父类的 +load 方法之后执行，而分类的 +load 方法会在它的主类的 +load 方法之后执行。但是不">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Runtime相关知识">
+<meta property="og:url" content="https://hepinglaosan.github.io/2016/12/15/ios-5/index.html">
 <meta property="og:site_name" content="和平老三不带V">
-<meta property="og:updated_time" content="2016-09-09T08:10:05.000Z">
+<meta property="og:description" content="Runtime相关知识
+1.Objective-C中的+load方法以及+initialize方法+load+load 方法是当类或分类被添加到 Objective-C runtime 时被调用的，实现这个方法可以让我们在类加载的时候执行一些类相关的行为。子类的 +load 方法会在它的所有父类的 +load 方法之后执行，而分类的 +load 方法会在它的主类的 +load 方法之后执行。但是不">
+<meta property="og:updated_time" content="2016-12-15T11:44:31.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="iOS">
+<meta name="twitter:title" content="Runtime相关知识">
+<meta name="twitter:description" content="Runtime相关知识
+1.Objective-C中的+load方法以及+initialize方法+load+load 方法是当类或分类被添加到 Objective-C runtime 时被调用的，实现这个方法可以让我们在类加载的时候执行一些类相关的行为。子类的 +load 方法会在它的所有父类的 +load 方法之后执行，而分类的 +load 方法会在它的主类的 +load 方法之后执行。但是不">
 
 
 
@@ -108,13 +114,7 @@
   };
 </script>
 
-  <title>
-  
-
-  
-    iOS | 和平老三不带V
-  
-</title>
+  <title> Runtime相关知识 | 和平老三不带V </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -135,7 +135,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -225,9 +225,150 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Runtime相关知识
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-15T11:21:41+08:00" content="2016-12-15">
+              2016-12-15
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/12/15/ios-5/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/15/ios-5/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/12/15/ios-5/" class="leancloud_visitors" data-flag-title="Runtime相关知识">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
       
-    
+      
+
+      
+        <p>Runtime相关知识</p>
+<h2 id="1-Objective-C中的-load方法以及-initialize方法"><a href="#1-Objective-C中的-load方法以及-initialize方法" class="headerlink" title="1.Objective-C中的+load方法以及+initialize方法"></a>1.Objective-C中的+load方法以及+initialize方法</h2><h4 id="load"><a href="#load" class="headerlink" title="+load"></a>+load</h4><p>+load 方法是当类或分类被添加到 Objective-C runtime 时被调用的，实现这个方法可以让我们在类加载的时候执行一些类相关的行为。子类的 +load 方法会在它的所有父类的 +load 方法之后执行，而分类的 +load 方法会在它的主类的 +load 方法之后执行。但是不同的类之间的 +load 方法的调用顺序是不确定的。</p>
+<p>子类 +load 方法等父类先执行完 +load 方法才执行。<br>分类 +load 方法会在它的主类 +load 方法之后执行。</p>
+<h4 id="initialize"><a href="#initialize" class="headerlink" title="+initialize"></a>+initialize</h4><p>+initialize 方法是在类或它的子类收到第一条消息之前被调用的，这里所指的消息包括实例方法和类方法的调用。也就是说 +initialize 方法是以懒加载的方式被调用的，如果程序一直没有给某个类或它的子类发送消息，那么这个类的 +initialize 方法是永远不会被调用的。那这样设计有什么好处呢？好处是显而易见的，那就是节省系统资源，避免浪费。</p>
+<p>runtime 使用了发送消息 objc_msgSend 的方式对 +initialize 方法进行调用。也就是说 +initialize 方法的调用与普通方法的调用是一样的，走的都是发送消息的流程。换言之，如果子类没有实现 +initialize 方法，那么继承自父类的实现会被调用；如果一个类的分类实现了 +initialize 方法，那么就会对这个类中的实现造成覆盖。</p>
+<p>因此，如果一个子类没有实现 +initialize 方法，那么父类的实现是会被执行多次的。</p>
+<h4 id="Selector-Method-And-implementation"><a href="#Selector-Method-And-implementation" class="headerlink" title="Selector Method And implementation"></a>Selector Method And implementation</h4><p>Selector: 即runtime中的方法名，映射在OC runtime中的C的字符串，当类被加载的时候，由编译器自动注入runtime中。<br>Method: 就是类定义的方法。。。<br>implementation:</p>
+<h4 id="Associated-Objects"><a href="#Associated-Objects" class="headerlink" title="Associated Objects"></a>Associated Objects</h4><p><a href="http://nshipster.com/associated-objects/" target="_blank" rel="external">Associated Objects</a></p>
+<p><a href="http://nshipster.com/method-swizzling/" target="_blank" rel="external">method-swizzling</a></p>
+<p><a href="http://ctarda.com/2016/02/why-to-avoid-tracking-state-in-view-controllers/" target="_blank" rel="external">Why to avoid tracking state in View Controllers</a></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/source/tags/iOS/" rel="tag">#iOS</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/10/10/8种模式帮你告别Massive-View-Controller/" rel="next" title="8种模式帮你告别Massive View Controller">
+                <i class="fa fa-chevron-left"></i> 8种模式帮你告别Massive View Controller
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/12/15/ios-4-1/" rel="prev" title="iOS 性能优化Tips">
+                iOS 性能优化Tips <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type = "text/javascript" src = "//s7.addthis.com/js/300/addthis_widget.js#pubid=2115947" async = "async" ></script>
+      
+    </div>
   </div>
 
 
@@ -238,8 +379,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="tags/iOS/index.html"
-           data-title="iOS" data-url="https://hepinglaosan.github.io/tags/iOS/index.html">
+      <div class="ds-thread" data-thread-key="2016/12/15/ios-5/"
+           data-title="Runtime相关知识" data-url="https://hepinglaosan.github.io/2016/12/15/ios-5/">
       </div>
     
   </div>
@@ -263,8 +404,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://tva1.sinaimg.cn/crop.100.0.375.375.50/623c27b4jw8ew5f985357j20dw0afgn5.jpg"
@@ -327,6 +477,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Objective-C中的-load方法以及-initialize方法"><span class="nav-number">1.</span> <span class="nav-text">1.Objective-C中的+load方法以及+initialize方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#load"><span class="nav-number">1.0.1.</span> <span class="nav-text">+load</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#initialize"><span class="nav-number">1.0.2.</span> <span class="nav-text">+initialize</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Selector-Method-And-implementation"><span class="nav-number">1.0.3.</span> <span class="nav-text">Selector Method And implementation</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Associated-Objects"><span class="nav-number">1.0.4.</span> <span class="nav-text">Associated Objects</span></a></li></ol></li></ol></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -430,6 +591,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
