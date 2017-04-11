@@ -84,21 +84,22 @@
 
 
 
-<meta name="description" content="iOS 性能优化Tips本文记录下在app调优过程中遇到的性能问题以及解决办法。（不定期更新）
-1.NSDateFormatter耗时老生常谈的问题，刚进入这个项目就发现代码大量使用了NSDateFormatter。自己新建了一个工程进行了测试，分别用了三种方法来进行NSDate和字符串的相互转换，其中:Test1，采用标准的NSDateFormatter *dateFormatter = [[N">
+<meta name="description" content="iOS代码向下兼容的处理办法
+最近项目中在适配 iOS 7 系统，常常遇到unrecognized selector sent to instance的 crash，究其原因，主要是调用了8系统以上才有的方法，如何处理？首先想到的解决办法就是加 if 判断版本，根据版本来执行对应的方法。但是这增加了大量的分散的适配代码，而且也会增加阅读成本，并不是最优解，那么还有没有更好的处理方法呢？
+方法调用是">
 <meta property="og:type" content="article">
-<meta property="og:title" content="iOS 性能优化Tips">
-<meta property="og:url" content="https://hepinglaosan.github.io/2016/12/15/ios-4-1/index.html">
+<meta property="og:title" content="兼容性适配">
+<meta property="og:url" content="https://hepinglaosan.github.io/2017/04/11/ios-6/index.html">
 <meta property="og:site_name" content="和平老三不带V">
-<meta property="og:description" content="iOS 性能优化Tips本文记录下在app调优过程中遇到的性能问题以及解决办法。（不定期更新）
-1.NSDateFormatter耗时老生常谈的问题，刚进入这个项目就发现代码大量使用了NSDateFormatter。自己新建了一个工程进行了测试，分别用了三种方法来进行NSDate和字符串的相互转换，其中:Test1，采用标准的NSDateFormatter *dateFormatter = [[N">
-<meta property="og:image" content="http://ww2.sinaimg.cn/mw1024/005NVLA9gw1fapdnsp6azj30yi1pcdj5.jpg">
-<meta property="og:updated_time" content="2017-03-17T07:04:17.000Z">
+<meta property="og:description" content="iOS代码向下兼容的处理办法
+最近项目中在适配 iOS 7 系统，常常遇到unrecognized selector sent to instance的 crash，究其原因，主要是调用了8系统以上才有的方法，如何处理？首先想到的解决办法就是加 if 判断版本，根据版本来执行对应的方法。但是这增加了大量的分散的适配代码，而且也会增加阅读成本，并不是最优解，那么还有没有更好的处理方法呢？
+方法调用是">
+<meta property="og:updated_time" content="2017-04-11T07:54:32.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="iOS 性能优化Tips">
-<meta name="twitter:description" content="iOS 性能优化Tips本文记录下在app调优过程中遇到的性能问题以及解决办法。（不定期更新）
-1.NSDateFormatter耗时老生常谈的问题，刚进入这个项目就发现代码大量使用了NSDateFormatter。自己新建了一个工程进行了测试，分别用了三种方法来进行NSDate和字符串的相互转换，其中:Test1，采用标准的NSDateFormatter *dateFormatter = [[N">
-<meta name="twitter:image" content="http://ww2.sinaimg.cn/mw1024/005NVLA9gw1fapdnsp6azj30yi1pcdj5.jpg">
+<meta name="twitter:title" content="兼容性适配">
+<meta name="twitter:description" content="iOS代码向下兼容的处理办法
+最近项目中在适配 iOS 7 系统，常常遇到unrecognized selector sent to instance的 crash，究其原因，主要是调用了8系统以上才有的方法，如何处理？首先想到的解决办法就是加 if 判断版本，根据版本来执行对应的方法。但是这增加了大量的分散的适配代码，而且也会增加阅读成本，并不是最优解，那么还有没有更好的处理方法呢？
+方法调用是">
 
 
 
@@ -116,7 +117,7 @@
   };
 </script>
 
-  <title> iOS 性能优化Tips | 和平老三不带V </title>
+  <title> 兼容性适配 | 和平老三不带V </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -246,7 +247,7 @@
             
             
               
-                iOS 性能优化Tips
+                兼容性适配
               
             
           </h1>
@@ -258,8 +259,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-12-15T11:21:41+08:00" content="2016-12-15">
-              2016-12-15
+            <time itemprop="dateCreated" datetime="2017-04-11T14:37:19+08:00" content="2017-04-11">
+              2017-04-11
             </time>
           </span>
 
@@ -269,8 +270,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/12/15/ios-4-1/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/15/ios-4-1/" itemprop="commentsCount"></span>
+                <a href="/2017/04/11/ios-6/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/11/ios-6/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -280,7 +281,7 @@
 
           
           
-             <span id="/2016/12/15/ios-4-1/" class="leancloud_visitors" data-flag-title="iOS 性能优化Tips">
+             <span id="/2017/04/11/ios-6/" class="leancloud_visitors" data-flag-title="兼容性适配">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -302,12 +303,18 @@
       
 
       
-        <h2 id="iOS-性能优化Tips"><a href="#iOS-性能优化Tips" class="headerlink" title="iOS 性能优化Tips"></a>iOS 性能优化Tips</h2><p>本文记录下在app调优过程中遇到的性能问题以及解决办法。（不定期更新）</p>
-<h2 id="1-NSDateFormatter耗时"><a href="#1-NSDateFormatter耗时" class="headerlink" title="1.NSDateFormatter耗时"></a>1.NSDateFormatter耗时</h2><p>老生常谈的问题，刚进入这个项目就发现代码大量使用了NSDateFormatter。自己新建了一个工程进行了测试，分别用了三种方法来进行NSDate和字符串的相互转换，其中:<br>Test1，采用标准的<code>NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];</code>随用随创建方式（显然不是Apple官方推荐的，也是我们代码中应该避免的）。<br>Test2采用<code>static NSDateFormatter *dateFormatter;</code>方式，静态化需要的变量，保证只创建一次。<br>Test3利用strptime函数来进行转换。<br>对此分别进行100次循环，查看运行耗时如下： <img src="http://ww2.sinaimg.cn/mw1024/005NVLA9gw1fapdnsp6azj30yi1pcdj5.jpg" alt="计算结果"></p>
-<p>结论：数据量大的时候还是少用NSDateFormatter吧！附Test3的代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">+ (NSDate *)dateFromISO8601StringDateFormatter:(NSString *)string locale:(NSLocale *)locale&#123;</div><div class="line">    if (!string) &#123;</div><div class="line">        return nil;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    struct tm tm;</div><div class="line">    time_t t;</div><div class="line"></div><div class="line">    strptime([string cStringUsingEncoding:NSUTF8StringEncoding], &quot;%Y-%m-%d %H:%M:%S&quot;, &amp;tm);</div><div class="line">    tm.tm_isdst = -1;</div><div class="line">    t = mktime(&amp;tm);</div><div class="line"></div><div class="line">    return [NSDate dateWithTimeIntervalSince1970:t + [[NSTimeZone localTimeZone] secondsFromGMT]];</div><div class="line">&#125;</div><div class="line"></div><div class="line">- (NSString *)ISO8601String:(NSDate*)date &#123;</div><div class="line">    struct tm *timeinfo;</div><div class="line">    char buffer[80];</div><div class="line"></div><div class="line">    time_t rawtime = [date timeIntervalSince1970] - [[NSTimeZone localTimeZone] secondsFromGMT];</div><div class="line">    timeinfo = localtime(&amp;rawtime);</div><div class="line"></div><div class="line">    strftime(buffer, 80, &quot;%Y-%m-%d %H:%M:%S&quot;, timeinfo);</div><div class="line"></div><div class="line">    return [NSString stringWithCString:buffer encoding:NSUTF8StringEncoding];</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h2 id="2-SQL操作耗时"><a href="#2-SQL操作耗时" class="headerlink" title="2.SQL操作耗时"></a>2.SQL操作耗时</h2><p>拿查询举例，除了百度出来的那些SQL语句查询技巧外，由于我们的业务关系，在查询时加了锁，所以我们尽量减少了执行查询语句的次数，例如尽量避免如下这种操作<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">for(int i = 0; i &lt; 100; i++)&#123;</div><div class="line">  [SQL search:&quot;xxx = i&quot;];</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>而是转化成下面的实现。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">NSString *searchKey = @&quot;&quot;;</div><div class="line">for(int i = 0; i &lt; 100; i++)&#123;</div><div class="line">  searchKey = [NSString stringWithFormat@&quot;&quot;];</div><div class="line">&#125;</div><div class="line">[SQL search:searchKey];</div></pre></td></tr></table></figure></p>
-<h2 id="3-截屏动画操作耗时"><a href="#3-截屏动画操作耗时" class="headerlink" title="3.截屏动画操作耗时"></a>3.截屏动画操作耗时</h2><p>开发中的动画很多是截取屏幕生成 UIImage来完成的。iOS7以后 UIView 类提供了一个方法<code>-drawViewHierarchyInRect:afterScreenUpdates:</code>，能够完整的把 view 的继承关系一并渲染 到 bitmap image。其实我们做动画只需要UIView就够了，完全不必渲染到 bitmap 后再操作，有没有更高效的方式呢？ 有的，苹果 daddy 已经为我们准备了另外两个方法 UIView <code>-snapshotViewAfterScreenUpdates:</code> and <code>-resizableSnapshotViewFromRect:afterScreenUpdates:withCapInsets:</code>，这两个方法返回的是 UIView 对象，直接可以通过操作view 对象来执行动画，经过 instruments 测试，耗时由之前的200ms 缩短至4ms（由于 view 的继承关系不同，耗时会有变化，但是越复杂的 View 耗时越多）。<a href="https://developer.apple.com/library/content/qa/qa1817/_index.html" target="_blank" rel="external">相关文档链接</a></p>
+        <p>iOS代码向下兼容的处理办法</p>
+<p>最近项目中在适配 iOS 7 系统，常常遇到unrecognized selector sent to instance的 crash，究其原因，主要是调用了8系统以上才有的方法，如何处理？首先想到的解决办法就是加 if 判断版本，根据版本来执行对应的方法。但是这增加了大量的分散的适配代码，而且也会增加阅读成本，并不是最优解，那么还有没有更好的处理方法呢？</p>
+<p>方法调用是通过底层的<code>objc_msgSend(id self, SEL op, ...)</code>来实现的，<code>一个方法==接收者+选择子</code>.</p>
+<p>一个完整的消息转发流程是</p>
+<p><code>+(BOOL)resolveInstanceMethod:(SEL)sel</code> -&gt;</p>
+<p><code>-(id)forwardingTargetForSelector:(SEL)aSelector</code> -&gt;</p>
+<p><code>-(void)forwardInvocation:(NSInvocation *)anInvocation</code></p>
+<p>如果仍未找到处理办法，则会抛出unrecognized selector sent to instance的异常。</p>
+<p>项目中我们利用<code>resolveInstanceMethod</code>方法，但凡找不到选择子时，系统会在所在类调用所属类的类方法该方法表示能否新增处理这个选择子的判断，返回 bool 值。我们在该方法里动态添加针对 iOS 7的补救方案。主要调用的伪代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">if ([NSStringFromSelector(sel) isEqualToString:@&quot;XXX&quot;]) &#123;</div><div class="line">    Method replaceMethod = class_getInstanceMethod([self class], @selector(new XXX));</div><div class="line">    class_addMethod([self class], sel, method_getImplementation(replaceMethod), method_getTypeEncoding(replaceMethod));</div><div class="line">    return YES;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>首先判断该 SEL 是否为你所要处理的 SEL，然后利用 runtime 的 class_addMethod 动态添加一个新方法即可。</p>
+<p>这种处理方式相对于根据版本来适配，代码量更少，不分散，便于管理。</p>
+<p>待深入研究：iOS 8以上新增了很多 property，我们可以利用 runtime 的 <code>class_addProperty</code>方法来针对7系统单独适配，这样更会一劳永逸解决兼容性问题</p>
 
       
     </div>
@@ -338,17 +345,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/12/15/ios-5/" rel="next" title="Runtime相关知识">
-                <i class="fa fa-chevron-left"></i> Runtime相关知识
+              <a href="/2017/02/20/post/" rel="next" title="杂记">
+                <i class="fa fa-chevron-left"></i> 杂记
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/02/20/post/" rel="prev" title="杂记">
-                杂记 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -377,8 +380,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/12/15/ios-4-1/"
-           data-title="iOS 性能优化Tips" data-url="https://hepinglaosan.github.io/2016/12/15/ios-4-1/">
+      <div class="ds-thread" data-thread-key="2017/04/11/ios-6/"
+           data-title="兼容性适配" data-url="https://hepinglaosan.github.io/2017/04/11/ios-6/">
       </div>
     
   </div>
@@ -482,7 +485,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#iOS-性能优化Tips"><span class="nav-number">1.</span> <span class="nav-text">iOS 性能优化Tips</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-NSDateFormatter耗时"><span class="nav-number">2.</span> <span class="nav-text">1.NSDateFormatter耗时</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-SQL操作耗时"><span class="nav-number">3.</span> <span class="nav-text">2.SQL操作耗时</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-截屏动画操作耗时"><span class="nav-number">4.</span> <span class="nav-text">3.截屏动画操作耗时</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
         </section>
