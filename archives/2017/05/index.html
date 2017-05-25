@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="iOS," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -84,19 +84,12 @@
 
 
 
-<meta name="description" content="最近简单的了解了下 NSDictionary 转 Model 映射的 runtime 实现。记录如下：
-12345678910111213141516171819+(instancetype)mapToModel:(NSDictionary *)bookInfo&amp;#123;    Book *bookModel = [[Book alloc]init];    NSMutableArray *ke">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Simple Mapper Implementation">
-<meta property="og:url" content="https://hepinglaosan.github.io/2017/04/24/mapper/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="和平老三不带V">
+<meta property="og:url" content="https://hepinglaosan.github.io/archives/2017/05/index.html">
 <meta property="og:site_name" content="和平老三不带V">
-<meta property="og:description" content="最近简单的了解了下 NSDictionary 转 Model 映射的 runtime 实现。记录如下：
-12345678910111213141516171819+(instancetype)mapToModel:(NSDictionary *)bookInfo&amp;#123;    Book *bookModel = [[Book alloc]init];    NSMutableArray *ke">
-<meta property="og:updated_time" content="2017-04-24T11:51:42.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Simple Mapper Implementation">
-<meta name="twitter:description" content="最近简单的了解了下 NSDictionary 转 Model 映射的 runtime 实现。记录如下：
-12345678910111213141516171819+(instancetype)mapToModel:(NSDictionary *)bookInfo&amp;#123;    Book *bookModel = [[Book alloc]init];    NSMutableArray *ke">
+<meta name="twitter:title" content="和平老三不带V">
 
 
 
@@ -114,7 +107,7 @@
   };
 </script>
 
-  <title> Simple Mapper Implementation | 和平老三不带V </title>
+  <title> 归档 | 和平老三不带V </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -135,7 +128,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container one-collumn sidebar-position-left  page-archive  ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -223,146 +216,66 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
+  <section id="posts" class="posts-collapse">
+    <span class="archive-move-on"></span>
+
+    <span class="archive-page-counter">
+      
+      
+      
+        
+      
+      嗯..! 目前共计 10 篇日志。 继续努力。
+    </span>
+
     
 
-  
-  
+      
+      
+      
 
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
+      
         
+        <div class="collection-title">
+          <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
+        </div>
+      
+      
+
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
         
-          <h1 class="post-title" itemprop="name headline">
-            
-            
+            <a class="post-title-link" href="/2017/05/25/RACollectionViewReorderableTripletLayout-Optimization/" itemprop="url">
               
-                Simple Mapper Implementation
+                <span itemprop="name">RACollectionViewReorderableTripletLayout-Optimization</span>
               
-            
-          </h1>
+            </a>
         
+      </h1>
 
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-04-24T13:44:47+08:00" content="2017-04-24">
-              2017-04-24
-            </time>
-          </span>
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2017-05-25T17:09:31+08:00"
+              content="2017-05-25" >
+          05-25
+        </time>
+      </div>
 
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2017/04/24/mapper/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/24/mapper/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2017/04/24/mapper/" class="leancloud_visitors" data-flag-title="Simple Mapper Implementation">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <p>最近简单的了解了下 NSDictionary 转 Model 映射的 runtime 实现。记录如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">+(instancetype)mapToModel:(NSDictionary *)bookInfo&#123;</div><div class="line">    Book *bookModel = [[Book alloc]init];</div><div class="line">    NSMutableArray *keys = [[NSMutableArray alloc] init];</div><div class="line">    u_int propertyListCount = 0;</div><div class="line">    objc_property_t *allProperties = class_copyPropertyList([self class], &amp;propertyListCount);</div><div class="line">    for (int i = 0; i &lt; propertyListCount; i++) &#123;</div><div class="line">       objc_property_t eachProperty = allProperties[i];</div><div class="line">       const char *propertyCString = property_getName(eachProperty);</div><div class="line">       NSString *propertyName = [NSString stringWithCString:propertyCString encoding:NSUTF8StringEncoding];</div><div class="line">       [keys addObject:propertyName];</div><div class="line">    &#125;</div><div class="line">    free(allProperties);</div><div class="line">    for (NSString *key in keys) &#123;</div><div class="line">        if ([bookInfo valueForKey:key]) &#123;</div><div class="line">           [bookModel setValue:[bookInfo valueForKey:key] forKey:key];</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    return bookModel;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>首先，调用了<code>class_copyPropertyList</code>这个方法来获取这个类的所有属性，其中<code>propertyListCount</code>为属性的总数。其中这个方法返回的数组用<code>objc_property_t *</code>来修饰，表示数组中元素为该类型（C 语言知识）。<br>随后在遍历数组的过程中，调用<code>property_getName</code>方法将<code>objc_property_t</code>转化成<code>const char *</code>字符串，进而转换成 OC 的 NSString对象存入 keys 数组。<br>释放已经用过的allProperties数组。<br>再次遍历 keys 数组，取出对应的类的属性。利用 KVC 将 bookInfo 对应的 object 存入属性中。</p>
-
-      
-    </div>
-
-    <div>
-      
-        
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/source/tags/iOS/" rel="tag">#iOS</a>
-          
-        </div>
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2017/04/11/ios-6/" rel="next" title="兼容性适配">
-                <i class="fa fa-chevron-left"></i> 兼容性适配
-              </a>
-            
-          </div>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/05/25/RACollectionViewReorderableTripletLayout-Optimization/" rel="prev" title="RACollectionViewReorderableTripletLayout-Optimization">
-                RACollectionViewReorderableTripletLayout-Optimization <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
+    </header>
   </article>
 
 
 
-    <div class="post-spread">
-      
-        <!-- Go to www.addthis.com/dashboard to customize your tools -->
-<script type = "text/javascript" src = "//s7.addthis.com/js/300/addthis_widget.js#pubid=2115947" async = "async" ></script>
-      
-    </div>
-  </div>
+    
+
+  </section>
+
+  
+
 
 
           </div>
@@ -370,14 +283,6 @@
 
 
           
-  <div class="comments" id="comments">
-    
-      <div class="ds-thread" data-thread-key="2017/04/24/mapper/"
-           data-title="Simple Mapper Implementation" data-url="https://hepinglaosan.github.io/2017/04/24/mapper/">
-      </div>
-    
-  </div>
-
 
         </div>
         
@@ -397,17 +302,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel ">
+      <section class="site-overview sidebar-panel  sidebar-panel-active ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://tva1.sinaimg.cn/crop.100.0.375.375.50/623c27b4jw8ew5f985357j20dw0afgn5.jpg"
@@ -470,17 +366,6 @@
 
       </section>
 
-      
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-            
-              
-            
-            
-              <p class="post-toc-empty">此文章未包含目录</p>
-            
-          </div>
-        </section>
       
 
     </div>
@@ -584,9 +469,11 @@
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
-
+  
+    <script type="text/javascript" id="motion.page.archive">
+      $('.archive-year').velocity('transition.slideLeftIn');
+    </script>
+  
 
 
   
