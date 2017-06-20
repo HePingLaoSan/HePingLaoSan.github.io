@@ -84,12 +84,25 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="和平老三不带V">
-<meta property="og:url" content="https://hepinglaosan.github.io/source/tags/iOS/index.html">
+<meta name="description" content="最近在查询 NSMutableArray线程安全的资料，记录下。
+相关 Stackoverflow 上的链接
+多线程去写NSMutableArray，可采用 NSLock 方式，简单来说就是操作前 lock 操作执行完 unlock。但注意，每个读写的地方都要保证用同一个 NSLock进行操作。另一种方式是利用 GCD 的 concurrent queue 来实现，个人感觉更高效。
+1.先创建一个">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Thread Safe NSMutableArray">
+<meta property="og:url" content="https://hepinglaosan.github.io/2017/06/20/Thread-Safe-NSMutableArray/index.html">
 <meta property="og:site_name" content="和平老三不带V">
+<meta property="og:description" content="最近在查询 NSMutableArray线程安全的资料，记录下。
+相关 Stackoverflow 上的链接
+多线程去写NSMutableArray，可采用 NSLock 方式，简单来说就是操作前 lock 操作执行完 unlock。但注意，每个读写的地方都要保证用同一个 NSLock进行操作。另一种方式是利用 GCD 的 concurrent queue 来实现，个人感觉更高效。
+1.先创建一个">
+<meta property="og:updated_time" content="2017-06-20T11:46:15.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="和平老三不带V">
+<meta name="twitter:title" content="Thread Safe NSMutableArray">
+<meta name="twitter:description" content="最近在查询 NSMutableArray线程安全的资料，记录下。
+相关 Stackoverflow 上的链接
+多线程去写NSMutableArray，可采用 NSLock 方式，简单来说就是操作前 lock 操作执行完 unlock。但注意，每个读写的地方都要保证用同一个 NSLock进行操作。另一种方式是利用 GCD 的 concurrent queue 来实现，个人感觉更高效。
+1.先创建一个">
 
 
 
@@ -107,7 +120,7 @@
   };
 </script>
 
-  <title> 标签: iOS | 和平老三不带V </title>
+  <title> Thread Safe NSMutableArray | 和平老三不带V </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -128,7 +141,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -216,270 +229,140 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        iOS
-        <small>标签</small>
-      </h2>
-    </div>
-
+  <div id="posts" class="posts-expand">
     
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/05/25/RACollectionViewReorderableTripletLayout-Optimization/" itemprop="url">
-              
-                <span itemprop="name">RACollectionViewReorderableTripletLayout第三方开源库的优化</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-05-25T17:09:31+08:00"
-              content="2017-05-25" >
-          05-25
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/04/24/mapper/" itemprop="url">
-              
-                <span itemprop="name">Simple Mapper Implementation</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-04-24T13:44:47+08:00"
-              content="2017-04-24" >
-          04-24
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/04/11/ios-6/" itemprop="url">
-              
-                <span itemprop="name">兼容性适配</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-04-11T14:37:19+08:00"
-              content="2017-04-11" >
-          04-11
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/12/15/ios-4-1/" itemprop="url">
-              
-                <span itemprop="name">iOS 性能优化Tips</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-12-15T11:21:41+08:00"
-              content="2016-12-15" >
-          12-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/12/15/ios-5/" itemprop="url">
-              
-                <span itemprop="name">Runtime相关知识</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-12-15T11:21:41+08:00"
-              content="2016-12-15" >
-          12-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/10/10/8种模式帮你告别Massive-View-Controller/" itemprop="url">
-              
-                <span itemprop="name">8种模式帮你告别Massive View Controller</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-10-10T10:51:29+08:00"
-              content="2016-10-10" >
-          10-10
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/10/09/ios-3/" itemprop="url">
-              
-                <span itemprop="name">如何把对象存入本地</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-10-09T10:47:01+08:00"
-              content="2016-10-09" >
-          10-09
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-tags" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/09/06/ios-2/" itemprop="url">
-              
-                <span itemprop="name">不走dealloc的解决办法</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-09-06T18:07:12+08:00"
-              content="2016-09-06" >
-          09-06
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-tags" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/08/31/ios_1/" itemprop="url">
-              
-                <span itemprop="name">iOS解耦心得---B类修改A类中变量的另一种方法</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-08-31T13:54:34+08:00"
-              content="2016-08-31" >
-          08-31
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-  </div>
 
   
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Thread Safe NSMutableArray
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-06-20T19:13:36+08:00" content="2017-06-20">
+              2017-06-20
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/06/20/Thread-Safe-NSMutableArray/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/06/20/Thread-Safe-NSMutableArray/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2017/06/20/Thread-Safe-NSMutableArray/" class="leancloud_visitors" data-flag-title="Thread Safe NSMutableArray">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>最近在查询 NSMutableArray线程安全的资料，记录下。</p>
+<p>相关 <a href="https://stackoverflow.com/a/17981941/7098488" target="_blank" rel="external">Stackoverflow 上的链接</a></p>
+<p>多线程去写NSMutableArray，可采用 NSLock 方式，简单来说就是操作前 lock 操作执行完 unlock。但注意，每个读写的地方都要保证用同一个 NSLock进行操作。另一种方式是利用 GCD 的 concurrent queue 来实现，个人感觉更高效。</p>
+<p>1.先创建一个<code>dispatch_queue_t concurrent_queue = dispatch_queue_create(&quot;com.domain.queuename&quot;, DISPATCH_QUEUE_CONCURRENT)</code></p>
+<p>2.读取操作，虽然是并行队列，但读取操作并不会<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">dispatch_async(concurrent_queue, ^&#123;</div><div class="line">    obj = [self.searchResult objectAtIndex:index];</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p>3.对于写入操作，并行队列中我们利用<code>dispatch_barrier_async</code>函数来隔离写入操作。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">- (void)insertObject:(id)obj atIndex:(NSUInteger)index &#123;</div><div class="line">    dispatch_barrier_async(concurrent_queue, ^&#123;</div><div class="line">        [self.searchResult insertObject:obj atIndex:index];</div><div class="line">    &#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>如此变保证了线程安全。你也可以自己写一个 ThreadSafeMutableArray 类，只是注意下类簇的如何子类即可。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/05/25/RACollectionViewReorderableTripletLayout-Optimization/" rel="next" title="RACollectionViewReorderableTripletLayout第三方开源库的优化">
+                <i class="fa fa-chevron-left"></i> RACollectionViewReorderableTripletLayout第三方开源库的优化
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type = "text/javascript" src = "//s7.addthis.com/js/300/addthis_widget.js#pubid=2115947" async = "async" ></script>
+      
+    </div>
+  </div>
 
 
           </div>
@@ -487,6 +370,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/06/20/Thread-Safe-NSMutableArray/"
+           data-title="Thread Safe NSMutableArray" data-url="https://hepinglaosan.github.io/2017/06/20/Thread-Safe-NSMutableArray/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -506,8 +397,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://tva1.sinaimg.cn/crop.100.0.375.375.50/623c27b4jw8ew5f985357j20dw0afgn5.jpg"
@@ -570,6 +470,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -673,6 +584,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
