@@ -89,16 +89,16 @@
 多线程去写NSMutableArray，可采用 NSLock 方式，简单来说就是操作前 lock 操作执行完 unlock。但注意，每个读写的地方都要保证用同一个 NSLock进行操作。另一种方式是利用 GCD 的 concurrent queue 来实现，个人感觉更高效。
 1.先创建一个">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Thread Safe NSMutableArray">
+<meta property="og:title" content="NSMutableArray如何保证线程安全">
 <meta property="og:url" content="https://hepinglaosan.github.io/2017/06/20/Thread-Safe-NSMutableArray/index.html">
 <meta property="og:site_name" content="和平老三不带V">
 <meta property="og:description" content="最近在查询 NSMutableArray线程安全的资料，记录下。
 相关 Stackoverflow 上的链接
 多线程去写NSMutableArray，可采用 NSLock 方式，简单来说就是操作前 lock 操作执行完 unlock。但注意，每个读写的地方都要保证用同一个 NSLock进行操作。另一种方式是利用 GCD 的 concurrent queue 来实现，个人感觉更高效。
 1.先创建一个">
-<meta property="og:updated_time" content="2017-06-20T11:46:15.000Z">
+<meta property="og:updated_time" content="2017-06-21T06:40:35.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Thread Safe NSMutableArray">
+<meta name="twitter:title" content="NSMutableArray如何保证线程安全">
 <meta name="twitter:description" content="最近在查询 NSMutableArray线程安全的资料，记录下。
 相关 Stackoverflow 上的链接
 多线程去写NSMutableArray，可采用 NSLock 方式，简单来说就是操作前 lock 操作执行完 unlock。但注意，每个读写的地方都要保证用同一个 NSLock进行操作。另一种方式是利用 GCD 的 concurrent queue 来实现，个人感觉更高效。
@@ -120,7 +120,7 @@
   };
 </script>
 
-  <title> Thread Safe NSMutableArray | 和平老三不带V </title>
+  <title> NSMutableArray如何保证线程安全 | 和平老三不带V </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -250,7 +250,7 @@
             
             
               
-                Thread Safe NSMutableArray
+                NSMutableArray如何保证线程安全
               
             
           </h1>
@@ -284,7 +284,7 @@
 
           
           
-             <span id="/2017/06/20/Thread-Safe-NSMutableArray/" class="leancloud_visitors" data-flag-title="Thread Safe NSMutableArray">
+             <span id="/2017/06/20/Thread-Safe-NSMutableArray/" class="leancloud_visitors" data-flag-title="NSMutableArray如何保证线程安全">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -373,7 +373,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2017/06/20/Thread-Safe-NSMutableArray/"
-           data-title="Thread Safe NSMutableArray" data-url="https://hepinglaosan.github.io/2017/06/20/Thread-Safe-NSMutableArray/">
+           data-title="NSMutableArray如何保证线程安全" data-url="https://hepinglaosan.github.io/2017/06/20/Thread-Safe-NSMutableArray/">
       </div>
     
   </div>
