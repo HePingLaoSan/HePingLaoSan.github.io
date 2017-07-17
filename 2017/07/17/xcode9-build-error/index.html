@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="iOS," />
 
 
 
@@ -84,12 +84,19 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="和平老三不带V">
-<meta property="og:url" content="https://hepinglaosan.github.io/archives/2017/02/index.html">
+<meta name="description" content="1. “Pass an object of the correct type to va_start”问题描述：更新了 xcode 9 后 ZXing 的第三方库编译失败，提示Pass an object of the correct type to va_start。具体代码定位到了 ZXByteArray 类中的initWithBytes方法的va_start函数调用中。
+解决办法：将- (i">
+<meta property="og:type" content="article">
+<meta property="og:title" content="xcode9编译失败问题及解决办法">
+<meta property="og:url" content="https://hepinglaosan.github.io/2017/07/17/xcode9-build-error/index.html">
 <meta property="og:site_name" content="和平老三不带V">
+<meta property="og:description" content="1. “Pass an object of the correct type to va_start”问题描述：更新了 xcode 9 后 ZXing 的第三方库编译失败，提示Pass an object of the correct type to va_start。具体代码定位到了 ZXByteArray 类中的initWithBytes方法的va_start函数调用中。
+解决办法：将- (i">
+<meta property="og:updated_time" content="2017-07-17T03:16:51.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="和平老三不带V">
+<meta name="twitter:title" content="xcode9编译失败问题及解决办法">
+<meta name="twitter:description" content="1. “Pass an object of the correct type to va_start”问题描述：更新了 xcode 9 后 ZXing 的第三方库编译失败，提示Pass an object of the correct type to va_start。具体代码定位到了 ZXByteArray 类中的initWithBytes方法的va_start函数调用中。
+解决办法：将- (i">
 
 
 
@@ -107,7 +114,7 @@
   };
 </script>
 
-  <title> 归档 | 和平老三不带V </title>
+  <title> xcode9编译失败问题及解决办法 | 和平老三不带V </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -128,7 +135,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  page-archive  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -216,66 +223,142 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
-
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      嗯..! 目前共计 12 篇日志。 继续努力。
-    </span>
-
+  <div id="posts" class="posts-expand">
     
 
-      
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                xcode9编译失败问题及解决办法
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-07-17T10:44:54+08:00" content="2017-07-17">
+              2017-07-17
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/07/17/xcode9-build-error/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/07/17/xcode9-build-error/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2017/07/17/xcode9-build-error/" class="leancloud_visitors" data-flag-title="xcode9编译失败问题及解决办法">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
       
       
 
       
+        <h4 id="1-“Pass-an-object-of-the-correct-type-to-va-start”"><a href="#1-“Pass-an-object-of-the-correct-type-to-va-start”" class="headerlink" title="1. “Pass an object of the correct type to va_start”"></a>1. “Pass an object of the correct type to va_start”</h4><p>问题描述：更新了 xcode 9 后 ZXing 的第三方库编译失败，提示<code>Pass an object of the correct type to va_start</code>。具体代码定位到了 ZXByteArray 类中的<code>initWithBytes</code>方法的<code>va_start</code>函数调用中。</p>
+<p>解决办法：将<code>- (id)initWithBytes:(int8_t)byte1, ...</code>的参数类型由 int8_t 转变为 double 类型即可。</p>
+<p>为什么会这样？<a href="https://www.securecoding.cert.org/confluence/display/cplusplus/EXP58-CPP.+Pass+an+object+of+the+correct+type+to+va_start" target="_blank" rel="external">点击我查看</a></p>
+
+      
+    </div>
+
+    <div>
+      
         
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/source/tags/iOS/" rel="tag">#iOS</a>
+          
         </div>
       
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/06/20/Thread-Safe-NSMutableArray/" rel="next" title="NSMutableArray如何保证线程安全">
+                <i class="fa fa-chevron-left"></i> NSMutableArray如何保证线程安全
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
 
       
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/02/20/post/" itemprop="url">
-              
-                <span itemprop="name">杂记</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-02-20T10:11:50+08:00"
-              content="2017-02-20" >
-          02-20
-        </time>
-      </div>
-
-    </header>
+      
+    </footer>
   </article>
 
 
 
-    
-
-  </section>
-
-  
-
+    <div class="post-spread">
+      
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type = "text/javascript" src = "//s7.addthis.com/js/300/addthis_widget.js#pubid=2115947" async = "async" ></script>
+      
+    </div>
+  </div>
 
 
           </div>
@@ -283,6 +366,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/07/17/xcode9-build-error/"
+           data-title="xcode9编译失败问题及解决办法" data-url="https://hepinglaosan.github.io/2017/07/17/xcode9-build-error/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -302,8 +393,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://tva1.sinaimg.cn/crop.100.0.375.375.50/623c27b4jw8ew5f985357j20dw0afgn5.jpg"
@@ -366,6 +466,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-“Pass-an-object-of-the-correct-type-to-va-start”"><span class="nav-number">1.</span> <span class="nav-text">1. “Pass an object of the correct type to va_start”</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -469,11 +580,9 @@
 
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
 
 
   
