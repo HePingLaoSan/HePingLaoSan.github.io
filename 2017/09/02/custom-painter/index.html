@@ -84,12 +84,19 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="和平老三不带V">
-<meta property="og:url" content="https://hepinglaosan.github.io/page/2/index.html">
+<meta name="description" content="手撸一个绘画 demo好久没更博了，主要是由于项目原因，时间上实在不允许。期间有两三次记录的想法，都因为时间搁浅了。忙里偷闲，趁这个时间手撸一个画画的 demo，这个 demo 支持的功能：笔，蜡笔，橡皮，以及常见的图形。
+技术选型iOS绘图的方式还是很多样的，系统提供了我们 Core Graphics、QuartzCore和 OpenGL ES 等。如果你的需求对绘图有较高要求，比如支持压感，则">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[custom-painter]">
+<meta property="og:url" content="https://hepinglaosan.github.io/2017/09/02/custom-painter/index.html">
 <meta property="og:site_name" content="和平老三不带V">
+<meta property="og:description" content="手撸一个绘画 demo好久没更博了，主要是由于项目原因，时间上实在不允许。期间有两三次记录的想法，都因为时间搁浅了。忙里偷闲，趁这个时间手撸一个画画的 demo，这个 demo 支持的功能：笔，蜡笔，橡皮，以及常见的图形。
+技术选型iOS绘图的方式还是很多样的，系统提供了我们 Core Graphics、QuartzCore和 OpenGL ES 等。如果你的需求对绘图有较高要求，比如支持压感，则">
+<meta property="og:updated_time" content="2017-09-02T09:18:40.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="和平老三不带V">
+<meta name="twitter:title" content="[custom-painter]">
+<meta name="twitter:description" content="手撸一个绘画 demo好久没更博了，主要是由于项目原因，时间上实在不允许。期间有两三次记录的想法，都因为时间搁浅了。忙里偷闲，趁这个时间手撸一个画画的 demo，这个 demo 支持的功能：笔，蜡笔，橡皮，以及常见的图形。
+技术选型iOS绘图的方式还是很多样的，系统提供了我们 Core Graphics、QuartzCore和 OpenGL ES 等。如果你的需求对绘图有较高要求，比如支持压感，则">
 
 
 
@@ -107,7 +114,7 @@
   };
 </script>
 
-  <title> 和平老三不带V </title>
+  <title> [custom-painter] | 和平老三不带V </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -128,9 +135,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -217,9 +222,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -239,10 +244,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/10/10/8种模式帮你告别Massive-View-Controller/" itemprop="url">
-                  8种模式帮你告别Massive View Controller
-                </a>
+                [custom-painter]
               
             
           </h1>
@@ -254,8 +256,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-10-10T10:51:29+08:00" content="2016-10-10">
-              2016-10-10
+            <time itemprop="dateCreated" datetime="2017-09-02T15:54:47+08:00" content="2017-09-02">
+              2017-09-02
             </time>
           </span>
 
@@ -265,8 +267,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/10/10/8种模式帮你告别Massive-View-Controller/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/10/8种模式帮你告别Massive-View-Controller/" itemprop="commentsCount"></span>
+                <a href="/2017/09/02/custom-painter/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/09/02/custom-painter/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -276,7 +278,7 @@
 
           
           
-             <span id="/2016/10/10/8种模式帮你告别Massive-View-Controller/" class="leancloud_visitors" data-flag-title="8种模式帮你告别Massive View Controller">
+             <span id="/2017/09/02/custom-painter/" class="leancloud_visitors" data-flag-title="[custom-painter]">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -298,27 +300,22 @@
       
 
       
-        
-          
-          查看原文
-ViewController做了太多事情导致变得越来越庞大。键盘事件，用户输入，数据的转换，视图初始化等等，他们真的是ViewController应该做的么？哪些需要委托给其他对象？本文我们就研究下如何让他们各司其职，这可以把大量复杂的代码拆分开，让你的代码更具可读性。
-在ViewCont
-          ...
+        <h1 id="手撸一个绘画-demo"><a href="#手撸一个绘画-demo" class="headerlink" title="手撸一个绘画 demo"></a>手撸一个绘画 demo</h1><p>好久没更博了，主要是由于项目原因，时间上实在不允许。期间有两三次记录的想法，都因为时间搁浅了。忙里偷闲，趁这个时间手撸一个画画的 demo，这个 demo 支持的功能：笔，蜡笔，橡皮，以及常见的图形。</p>
+<h4 id="技术选型"><a href="#技术选型" class="headerlink" title="技术选型"></a>技术选型</h4><p>iOS绘图的方式还是很多样的，系统提供了我们 Core Graphics、QuartzCore和 OpenGL ES 等。如果你的需求对绘图有较高要求，比如支持压感，则需要 OpenGL ES 偏底层的库来实现。如果需求比较简单，可以利用 iOS 给我们封装好的Core Graphics。其中常见的方法即在<code>drawRect</code>方法中开启上下文进行绘制。但是其中的弊病即内存会根据<code>drawRect</code>画布的大小来开辟内存空间，这也就是可能会造成内存问题。如果需求只是绘制少量的简单图形。则可以利用在<code>drawRect</code>中实现，但是我们这次的绘画 demo 会频繁的在屏幕上绘制，当然性能因素也是一大方面。则此方案暂时不考虑。在 QuartzCore 库中，采用 CAShapeLayer来去绘制。 </p>
 
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/10/10/8种模式帮你告别Massive-View-Controller/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+      
+    </div>
+
+    <div>
+      
         
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
@@ -326,373 +323,39 @@ ViewController做了太多事情导致变得越来越庞大。键盘事件，用
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/07/17/xcode9-build-error/" rel="next" title="xcode9编译失败问题及解决办法">
+                <i class="fa fa-chevron-left"></i> xcode9编译失败问题及解决办法
+              </a>
             
-              
-                
-                <a class="post-title-link" href="/2016/10/09/ios-3/" itemprop="url">
-                  如何把对象存入本地
-                </a>
-              
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-10-09T10:47:01+08:00" content="2016-10-09">
-              2016-10-09
-            </time>
-          </span>
-
-          
-
-          
+              <a href="/2017/11/14/iOS-Code-Review/" rel="prev" title="iOS Code Review纪要">
+                iOS Code Review纪要 <i class="fa fa-chevron-right"></i>
+              </a>
             
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/10/09/ios-3/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/09/ios-3/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/10/09/ios-3/" class="leancloud_visitors" data-flag-title="如何把对象存入本地">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-          利用NSKeyedArchiver把对象存入本地当你想把一个对象保存到本地的时候需要做以下几点：1.使其遵循NSCoding协议。NSCoding 是一个简单的协议，遵循NSCoding协议的类可以被序列化和反序列化，2.复写 encodeWithCoder:aCoder 方法，该方法告诉系统，如何
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/10/09/ios-3/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
+
+    <div class="post-spread">
       
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-tags " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/09/06/ios-2/" itemprop="url">
-                  不走dealloc的解决办法
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-09-06T18:07:12+08:00" content="2016-09-06">
-              2016-09-06
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/09/06/ios-2/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/06/ios-2/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/09/06/ios-2/" class="leancloud_visitors" data-flag-title="不走dealloc的解决办法">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          不走dealloc的解决办法当controller不走dealloc说明ARC认为你的controller还处于被持有状态，此时检查可能持有它的对象，过程可能会很痛苦。
-容易忽视的地方：
-
-1.NSTimer.
-  没有及时的invalidate，这样timer持有者controller，导致con
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/09/06/ios-2/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type = "text/javascript" src = "//s7.addthis.com/js/300/addthis_widget.js#pubid=2115947" async = "async" ></script>
       
     </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-tags " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/08/31/ios_1/" itemprop="url">
-                  iOS解耦心得---B类修改A类中变量的另一种方法
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-31T13:54:34+08:00" content="2016-08-31">
-              2016-08-31
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/08/31/ios_1/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/31/ios_1/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/08/31/ios_1/" class="leancloud_visitors" data-flag-title="iOS解耦心得---B类修改A类中变量的另一种方法">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          
-需求描述最近开发遇到这么一个需求，我们项目架构采用MVVM的变种模式，什么鬼？简单来说，在Model类和Controller类之间分离出专门处理数据逻辑的DataController层，假设A是我们的Controller层，B是DataController层.需求就是在B类中实现修改A类中的全局变
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/08/31/ios_1/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-  </section>
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-  </nav>
-
+  </div>
 
 
           </div>
@@ -700,6 +363,14 @@ ViewController做了太多事情导致变得越来越庞大。键盘事件，用
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/09/02/custom-painter/"
+           data-title="[custom-painter]" data-url="https://hepinglaosan.github.io/2017/09/02/custom-painter/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -719,8 +390,17 @@ ViewController做了太多事情导致变得越来越庞大。键盘事件，用
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://tva1.sinaimg.cn/crop.100.0.375.375.50/623c27b4jw8ew5f985357j20dw0afgn5.jpg"
@@ -783,6 +463,17 @@ ViewController做了太多事情导致变得越来越庞大。键盘事件，用
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#手撸一个绘画-demo"><span class="nav-number">1.</span> <span class="nav-text">手撸一个绘画 demo</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#技术选型"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">技术选型</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -886,6 +577,10 @@ ViewController做了太多事情导致变得越来越庞大。键盘事件，用
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 

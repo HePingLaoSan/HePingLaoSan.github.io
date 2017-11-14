@@ -84,12 +84,58 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="和平老三不带V">
-<meta property="og:url" content="https://hepinglaosan.github.io/page/2/index.html">
+<meta name="description" content="##iOS Code Review纪要
+Hi,All 
+今天 code review 提到的点记录如下： 
+###1. 固定字符串使用宏定义好还是字符串好？
+
+讨论使用宏的缺陷：
+不能区分类型 
+
+宏定义复杂的话，操作宏可能会出现问题.  
+
+使用宏定义时留意定义重复引起异常 
+系统解决宏重复定义的方式是提前使用编译控制指令判断，比如：
+
+
+12345#ifndef NS_ASSUME_NONNU">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS Code Review纪要">
+<meta property="og:url" content="https://hepinglaosan.github.io/2017/11/14/iOS-Code-Review/index.html">
 <meta property="og:site_name" content="和平老三不带V">
+<meta property="og:description" content="##iOS Code Review纪要
+Hi,All 
+今天 code review 提到的点记录如下： 
+###1. 固定字符串使用宏定义好还是字符串好？
+
+讨论使用宏的缺陷：
+不能区分类型 
+
+宏定义复杂的话，操作宏可能会出现问题.  
+
+使用宏定义时留意定义重复引起异常 
+系统解决宏重复定义的方式是提前使用编译控制指令判断，比如：
+
+
+12345#ifndef NS_ASSUME_NONNU">
+<meta property="og:updated_time" content="2017-11-14T12:04:57.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="和平老三不带V">
+<meta name="twitter:title" content="iOS Code Review纪要">
+<meta name="twitter:description" content="##iOS Code Review纪要
+Hi,All 
+今天 code review 提到的点记录如下： 
+###1. 固定字符串使用宏定义好还是字符串好？
+
+讨论使用宏的缺陷：
+不能区分类型 
+
+宏定义复杂的话，操作宏可能会出现问题.  
+
+使用宏定义时留意定义重复引起异常 
+系统解决宏重复定义的方式是提前使用编译控制指令判断，比如：
+
+
+12345#ifndef NS_ASSUME_NONNU">
 
 
 
@@ -107,7 +153,7 @@
   };
 </script>
 
-  <title> 和平老三不带V </title>
+  <title> iOS Code Review纪要 | 和平老三不带V </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -128,9 +174,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -217,9 +261,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -239,10 +283,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/10/10/8种模式帮你告别Massive-View-Controller/" itemprop="url">
-                  8种模式帮你告别Massive View Controller
-                </a>
+                iOS Code Review纪要
               
             
           </h1>
@@ -254,8 +295,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-10-10T10:51:29+08:00" content="2016-10-10">
-              2016-10-10
+            <time itemprop="dateCreated" datetime="2017-11-14T20:02:03+08:00" content="2017-11-14">
+              2017-11-14
             </time>
           </span>
 
@@ -265,8 +306,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/10/10/8种模式帮你告别Massive-View-Controller/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/10/8种模式帮你告别Massive-View-Controller/" itemprop="commentsCount"></span>
+                <a href="/2017/11/14/iOS-Code-Review/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/11/14/iOS-Code-Review/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -276,7 +317,7 @@
 
           
           
-             <span id="/2016/10/10/8种模式帮你告别Massive-View-Controller/" class="leancloud_visitors" data-flag-title="8种模式帮你告别Massive View Controller">
+             <span id="/2017/11/14/iOS-Code-Review/" class="leancloud_visitors" data-flag-title="iOS Code Review纪要">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -298,27 +339,57 @@
       
 
       
-        
-          
-          查看原文
-ViewController做了太多事情导致变得越来越庞大。键盘事件，用户输入，数据的转换，视图初始化等等，他们真的是ViewController应该做的么？哪些需要委托给其他对象？本文我们就研究下如何让他们各司其职，这可以把大量复杂的代码拆分开，让你的代码更具可读性。
-在ViewCont
-          ...
+        <p>##iOS Code Review纪要</p>
+<p>Hi,All </p>
+<p>今天 code review 提到的点记录如下： </p>
+<p>###1. 固定字符串使用宏定义好还是字符串好？</p>
+<ol>
+<li><p>讨论使用宏的缺陷：</p>
+<p>不能区分类型 </p>
+</li>
+<li><p>宏定义复杂的话，操作宏可能会出现问题.  </p>
+</li>
+<li><p>使用宏定义时留意定义重复引起异常 </p>
+<p>系统解决宏重复定义的方式是提前使用编译控制指令判断，比如：</p>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">#ifndef NS_ASSUME_NONNULL_BEGIN</div><div class="line"></div><div class="line">#define NS_ASSUME_NONNULL_BEGIN _Pragma(&quot;clang assume_nonnull begin&quot;)</div><div class="line"></div><div class="line">#endif</div></pre></td></tr></table></figure>
+<ol>
+<li>宏的优点，可移植性高，简洁明了，一看就懂。<br>####2.相同功能再不同版本系统 API 不一致，可以在应用内部进行封装。</li>
+</ol>
+<p>比如 UIAlertView(2.0-9.0) | UIAlertController(8.0+) 可以封装为一个 SMAlert 在里面进行兼容逻辑处理。</p>
+<p>####3. 文件行数偏多，可以根据功能拆分为不同的文件。</p>
+<p>让每个类各司其职</p>
+<p>####4. 简单的 if else 语句考虑是否可以简化为三段式语法。比如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">if (granted)&#123;</div><div class="line">    tempDataStore.userSetting.hasAccessToAB = YES;</div><div class="line">&#125; else &#123;</div><div class="line">	tempDataStore.userSetting.hasAccessToAB = NO;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>转化为</p>
+<p><code>tempDataStore.userSetting.hasAccessToAB = granted;</code></p>
+<p>####5. @autoreleasepool </p>
+<p>1) @autoreleasepool autoreleasepool可以理解成一个双向链表的结构的堆栈，包含要释放的对象，每个节点是autoreleasepoolpage 对象，每个 page 最大的空间是虚拟内存的一页大小（4096），</p>
+<p>2) OC 使用 @autoreleasepool 更加有效的办法是将其放置在循环内部，这样能及时将对象释放掉.</p>
+<p>3) 在 iOS 6以及之前，新建的线程需要实现@autoreleasepool runloop 结束前释放对象可以参考 NSObject.mm</p>
+<p>4) 每个线程都要有对应的autoreleasepool。系统已经帮我们写好了主线程的autoreleaepool(main.m中)。<br><a href="http://www.jishux.com/plus/view-616265-1.html" target="_blank" rel="external">关于autoreleasepool的介绍</a></p>
+<p>####6. 代码风格统一，比如函数名后面大括号的位置，保持书写一致。</p>
+<p>####7. 分支 if else 尽量配对使用，保证逻辑完整，if 里面尽量包含主要的处理逻辑。是否需要在 if 里面就执行 return 值得考虑。</p>
+<p>####8. 关于异常捕获，try catch, 考虑是否需要添加 try catch . 添加 try catch 理由是防止程序崩溃，提供良好用户体验。不添加 try catch 理由是让程序及早崩溃，防止错误蔓延，同时增加 try catch 也会消耗系统的性能。开发过程考虑使用断言及早暴露程序的问题。考虑根据实际可能出现的异常情况做不同的异常处理。<br>OC对它支持并不好，同时try catch会造成内存泄露，因为捕获异常的时候会破坏ARC机制，导致对象释放不了，如果非要加try的话，尽量不要在try中创建对象。<br><a href="https://stackoverflow.com/questions/27140891/why-does-try-catch-in-objective-c-cause-memory-leak" target="_blank" rel="external">try-catch链接1</a><br><a href="https://stackoverflow.com/questions/42144016/objective-c-try-catch-why-does-this-compile-and-why-is-the-return-different-b" target="_blank" rel="external">try-catch链接2</a></p>
+<p>####9. 关于私有方法名的使用，私有方法是需要在程序里单独建一个 check 文件去记录使用私有方法的地方和版本（备案）。为了以后的维护方便。</p>
+<p>####10. NSDateFormatter 这种比较消耗性能的类，如果分配内存次数过多的话，可以考虑做一个成员或者静态变量，没必要每次都分配。</p>
+<p>####11. 一个方法内部构建好的可变资源（比如可变数组）返回给调用者的时候，为了防止调用者任意篡改，可以考虑在返回的时候进行 copy 将可变的资源变为不可变资源（可变数组转化为不可变数组）。</p>
+<p>####12. 使用底层存储机制的时候考虑到之后的维护性，需要选用合适的存储机制，比如 OC 上的 CoreData 还有 Sqlite ，技术选型的时候要根据自身的需求结合具体技术的特点去选择。 </p>
 
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/10/10/8种模式帮你告别Massive-View-Controller/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+      
+    </div>
+
+    <div>
+      
         
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
@@ -326,373 +397,35 @@ ViewController做了太多事情导致变得越来越庞大。键盘事件，用
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/09/02/custom-painter/" rel="next" title="[custom-painter]">
+                <i class="fa fa-chevron-left"></i> [custom-painter]
+              </a>
             
-              
-                
-                <a class="post-title-link" href="/2016/10/09/ios-3/" itemprop="url">
-                  如何把对象存入本地
-                </a>
-              
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-10-09T10:47:01+08:00" content="2016-10-09">
-              2016-10-09
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/10/09/ios-3/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/09/ios-3/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/10/09/ios-3/" class="leancloud_visitors" data-flag-title="如何把对象存入本地">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-          利用NSKeyedArchiver把对象存入本地当你想把一个对象保存到本地的时候需要做以下几点：1.使其遵循NSCoding协议。NSCoding 是一个简单的协议，遵循NSCoding协议的类可以被序列化和反序列化，2.复写 encodeWithCoder:aCoder 方法，该方法告诉系统，如何
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/10/09/ios-3/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
+
+    <div class="post-spread">
       
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-tags " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/09/06/ios-2/" itemprop="url">
-                  不走dealloc的解决办法
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-09-06T18:07:12+08:00" content="2016-09-06">
-              2016-09-06
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/09/06/ios-2/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/06/ios-2/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/09/06/ios-2/" class="leancloud_visitors" data-flag-title="不走dealloc的解决办法">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          不走dealloc的解决办法当controller不走dealloc说明ARC认为你的controller还处于被持有状态，此时检查可能持有它的对象，过程可能会很痛苦。
-容易忽视的地方：
-
-1.NSTimer.
-  没有及时的invalidate，这样timer持有者controller，导致con
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/09/06/ios-2/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type = "text/javascript" src = "//s7.addthis.com/js/300/addthis_widget.js#pubid=2115947" async = "async" ></script>
       
     </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-tags " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/08/31/ios_1/" itemprop="url">
-                  iOS解耦心得---B类修改A类中变量的另一种方法
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-31T13:54:34+08:00" content="2016-08-31">
-              2016-08-31
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/08/31/ios_1/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/31/ios_1/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/08/31/ios_1/" class="leancloud_visitors" data-flag-title="iOS解耦心得---B类修改A类中变量的另一种方法">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          
-需求描述最近开发遇到这么一个需求，我们项目架构采用MVVM的变种模式，什么鬼？简单来说，在Model类和Controller类之间分离出专门处理数据逻辑的DataController层，假设A是我们的Controller层，B是DataController层.需求就是在B类中实现修改A类中的全局变
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/08/31/ios_1/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-  </section>
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-  </nav>
-
+  </div>
 
 
           </div>
@@ -700,6 +433,14 @@ ViewController做了太多事情导致变得越来越庞大。键盘事件，用
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/11/14/iOS-Code-Review/"
+           data-title="iOS Code Review纪要" data-url="https://hepinglaosan.github.io/2017/11/14/iOS-Code-Review/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -719,8 +460,17 @@ ViewController做了太多事情导致变得越来越庞大。键盘事件，用
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://tva1.sinaimg.cn/crop.100.0.375.375.50/623c27b4jw8ew5f985357j20dw0afgn5.jpg"
@@ -783,6 +533,17 @@ ViewController做了太多事情导致变得越来越庞大。键盘事件，用
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -886,6 +647,10 @@ ViewController做了太多事情导致变得越来越庞大。键盘事件，用
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
