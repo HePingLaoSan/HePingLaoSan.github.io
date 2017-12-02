@@ -84,12 +84,16 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="和平老三不带V">
-<meta property="og:url" content="https://hepinglaosan.github.io/archives/2017/02/index.html">
+<meta name="description" content="iOS 中如何将部分 Log 保存并上传？1. 将全部的 log 写入本地文件123456789101112131415161718-(void)saveDEBUGlog&amp;#123;    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);    NSSt">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[iOS中控制NSLog输出时机]">
+<meta property="og:url" content="https://hepinglaosan.github.io/2017/12/02/iOS中控制NSLog输出时机/index.html">
 <meta property="og:site_name" content="和平老三不带V">
+<meta property="og:description" content="iOS 中如何将部分 Log 保存并上传？1. 将全部的 log 写入本地文件123456789101112131415161718-(void)saveDEBUGlog&amp;#123;    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);    NSSt">
+<meta property="og:updated_time" content="2017-12-02T12:29:07.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="和平老三不带V">
+<meta name="twitter:title" content="[iOS中控制NSLog输出时机]">
+<meta name="twitter:description" content="iOS 中如何将部分 Log 保存并上传？1. 将全部的 log 写入本地文件123456789101112131415161718-(void)saveDEBUGlog&amp;#123;    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);    NSSt">
 
 
 
@@ -107,7 +111,7 @@
   };
 </script>
 
-  <title> 归档 | 和平老三不带V </title>
+  <title> [iOS中控制NSLog输出时机] | 和平老三不带V </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -128,7 +132,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  page-archive  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -216,66 +220,141 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
-
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      嗯..! 目前共计 15 篇日志。 继续努力。
-    </span>
-
+  <div id="posts" class="posts-expand">
     
 
-      
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                [iOS中控制NSLog输出时机]
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-12-02T20:14:58+08:00" content="2017-12-02">
+              2017-12-02
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/12/02/iOS中控制NSLog输出时机/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/12/02/iOS中控制NSLog输出时机/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2017/12/02/iOS中控制NSLog输出时机/" class="leancloud_visitors" data-flag-title="[iOS中控制NSLog输出时机]">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
       
       
 
       
+        <h4 id="iOS-中如何将部分-Log-保存并上传？"><a href="#iOS-中如何将部分-Log-保存并上传？" class="headerlink" title="iOS 中如何将部分 Log 保存并上传？"></a>iOS 中如何将部分 Log 保存并上传？</h4><h5 id="1-将全部的-log-写入本地文件"><a href="#1-将全部的-log-写入本地文件" class="headerlink" title="1. 将全部的 log 写入本地文件"></a>1. 将全部的 log 写入本地文件</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">-(void)saveDEBUGlog&#123;</div><div class="line">    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);</div><div class="line">    NSString *documentDirectory = [paths objectAtIndex:0];</div><div class="line">    </div><div class="line">    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];</div><div class="line">    [dateFormatter setDateFormat:@&quot;yyyy_MM_dd_HH_mm_ss&quot;];</div><div class="line">    NSString *currentDateStr = [dateFormatter stringFromDate:[NSDate date]];</div><div class="line">    NSString *fileName = [NSString stringWithFormat:@&quot;testLog_%@.log&quot;,currentDateStr];</div><div class="line">    </div><div class="line">    NSString *logFilePath = [documentDirectory stringByAppendingPathComponent:fileName];</div><div class="line">    // 先删除已经存在的文件</div><div class="line">    NSFileManager *defaultManager = [NSFileManager defaultManager];</div><div class="line">    [defaultManager removeItemAtPath:logFilePath error:nil];</div><div class="line">    </div><div class="line">    // 将log输入到文件</div><div class="line">    freopen([logFilePath cStringUsingEncoding:NSASCIIStringEncoding], &quot;a+&quot;, stdout);</div><div class="line">    freopen([logFilePath cStringUsingEncoding:NSASCIIStringEncoding], &quot;a+&quot;, stderr);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这个方法主要是调用<code>freopen</code>这个方法来写入， 其中 stdout 和 stderr 囊括了 iOS 大部分的异常输出。</p>
+<h5 id="2-根据-Bool-值控制-log-输出"><a href="#2-根据-Bool-值控制-log-输出" class="headerlink" title="2. 根据 Bool 值控制 log 输出"></a>2. 根据 Bool 值控制 log 输出</h5><p>用户在使用 app 遇到各种各样的问题，当自己以及测试团队不好定位原因的时候，能将用户把关键点的 log 发送过来是最好的分析方法了。但是如何将 app 运行过程中的 log 截取一部分保存呢？像开关一样能够控制 log 的读写呢？通过阅读 MQTTLog 源码发现获得的灵感。</p>
+<p>首先对 NSLog 进行下宏替换，项目中统一使用 SLOG 来进行输出</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">#define SLOG(fmt, ...) if (reportLoggerIsOpen) NSLog((@&quot;%s [Line %d] &quot; fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)</div></pre></td></tr></table></figure>
+<p>从宏定义可以看出，reportLoggerIsOpen 是控制 Log 输出的开关，对于reportLoggerIsOpen的定义，在 h 文件中先 extern 声明这个变量，然后再 m 文件中去实现。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">.h 文件</div><div class="line"></div><div class="line">#import &lt;Foundation/Foundation.h&gt;</div><div class="line"></div><div class="line">extern BOOL reportLoggerIsOpen;</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">.m 文件</div><div class="line">BOOL reportLoggerIsOpen = NO;</div><div class="line"></div><div class="line">+ (void)setLogOpen:(BOOL)open &#123;</div><div class="line">    reportLoggerIsOpen = open;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>通过<code>setLogOpen</code>这个方法，就能够收放自如的控制日志写入了。比如你需要抓取登录模块的日志，那么就在登录前传入 true，登录完毕后，传入 false，即可只保留登录模块的日志了。</p>
+
+      
+    </div>
+
+    <div>
+      
         
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/11/14/iOS-Code-Review/" rel="next" title="iOS Code Review纪要 2017-10-26">
+                <i class="fa fa-chevron-left"></i> iOS Code Review纪要 2017-10-26
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
         </div>
       
-      
 
       
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/02/20/post/" itemprop="url">
-              
-                <span itemprop="name">杂记</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-02-20T10:11:50+08:00"
-              content="2017-02-20" >
-          02-20
-        </time>
-      </div>
-
-    </header>
+      
+    </footer>
   </article>
 
 
 
-    
-
-  </section>
-
-  
-
+    <div class="post-spread">
+      
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type = "text/javascript" src = "//s7.addthis.com/js/300/addthis_widget.js#pubid=2115947" async = "async" ></script>
+      
+    </div>
+  </div>
 
 
           </div>
@@ -283,6 +362,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/12/02/iOS中控制NSLog输出时机/"
+           data-title="[iOS中控制NSLog输出时机]" data-url="https://hepinglaosan.github.io/2017/12/02/iOS中控制NSLog输出时机/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -302,8 +389,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://tva1.sinaimg.cn/crop.100.0.375.375.50/623c27b4jw8ew5f985357j20dw0afgn5.jpg"
@@ -366,6 +462,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#iOS-中如何将部分-Log-保存并上传？"><span class="nav-number">1.</span> <span class="nav-text">iOS 中如何将部分 Log 保存并上传？</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-将全部的-log-写入本地文件"><span class="nav-number">1.1.</span> <span class="nav-text">1. 将全部的 log 写入本地文件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-根据-Bool-值控制-log-输出"><span class="nav-number">1.2.</span> <span class="nav-text">2. 根据 Bool 值控制 log 输出</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -469,11 +576,9 @@
 
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
 
 
   
